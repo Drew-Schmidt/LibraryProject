@@ -1,0 +1,213 @@
+:root {
+  --body-text: 1.6rem;
+  --headings: 2.75rem;
+  --subheadings: 2.3rem;
+  --small-text: 1.6rem;
+  --lightFont: white;
+  --btnBackground: rgba(0,0,0,0); 
+}
+
+html, body {
+  font-size: 62.5%;
+  margin: 0%;
+  background-color: #3C4C79;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--lightFont)
+}
+
+h1 {
+  font-size: var(--headings);
+}
+
+h2 {
+  font-size: var(--subheadings);
+  font-weight: 400;
+  margin: 2rem 0 -1.2rem 0;
+}
+
+p {
+  margin-bottom: -.1rem;
+}
+
+i {
+  color: white;
+}
+
+.fixedHeader, .formContainer, .add-book { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book {
+  width: 5rem;
+  height: 5rem;
+  border-radius:2.5rem;
+  position: fixed;
+  left: 85%;
+  bottom: 3%;
+  font-size: 4rem;
+  text-align: center;
+  border: solid .1rem white;
+  background: radial-gradient(ellipse at center, #CE6658 0%, #B95B4F 50%, #AE564A 100%);
+  color: white;
+  cursor: pointer;
+}
+
+.fixedHeader {
+  background-color: #3C4C79;
+  top: 0%;
+  width: 100%;
+  height: 10rem;
+  position: fixed;  
+}
+
+/*-------------- Book form ---------------*/
+
+/* blurred background and 'visible' setup */
+.formContainer {
+  height: 100%;
+  width: 100%; 
+  top: 0%; 
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0,0,0,.2);
+  backdrop-filter: blur(.3rem);
+  z-index: 1;
+}
+/* 'hidden' setup */
+.hidden {
+
+    overflow: hidden;
+    height: 0;
+    position: fixed;
+}
+
+/* book form  */
+#book-form {
+  font-size: var(--subheadings);
+  margin: .5rem 0 0 0 ;
+  padding-left: 2rem;
+  width: 32rem;
+  height: 50rem;
+  display:flex;
+  flex-direction: column;
+  border: solid .2rem #5A72B6;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #4C619B;
+  box-shadow: .5rem .5rem 1.1rem .1rem rgba(0,0,0,0.32); 
+}
+
+#book-title, #book-author, #book-pages, #book-subtitle {
+
+  width: 90%;
+  color: white;
+  font: var(--subheadings);
+  height: 3.5rem;
+  margin: 0 .1rem .5rem 1rem;
+  border: solid .2rem white;
+  border-radius: .5rem;
+  background-color:#5A72B6;  
+}
+
+#book-submit {
+   margin: 3rem 0 .3rem 5rem;
+   height: 3.5rem;
+   width: 20rem;
+   border-radius:.6rem;
+   color: white;
+   background-color: rgba(0,0,0,0);
+   font-size: 2.5rem;
+   border: solid .2rem #5A72B6;
+   cursor: pointer; 
+}
+
+#book-submit:hover{
+  border: solid .2rem coral;
+
+}
+
+/*---------  Book Card   --------------*/
+
+/* book display area */
+.testSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10.5rem;
+}
+
+/* book card */
+.book{
+  font-size: var(--body-text);
+  margin: 0.5rem ;
+  width: 32rem;
+  height: 18rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid .2rem #5A72B6;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #4C619B;
+}
+
+
+.book.bookInfoContainer {
+  display: flex;
+  width: 20rem;
+}
+
+.book.buttonContainer {
+
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+}
+
+.book.buttonContainer.bookTxt {
+  
+  margin-left: 1rem;
+  width: 100%;
+  color: white;
+}
+
+.deleteBtn{
+  height: 5rem;
+  width: 5rem;
+  color:white;
+  background-color: var(--btnBackground);
+  font-size: 2.5rem;
+  font-weight: 1000;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteBtn:hover{
+  color:coral;
+}
+
+ .readBtn {
+   margin: 2.5rem 0 .2rem 8rem;
+   height: 3.5rem;
+   width: 15rem;
+   border-radius:.6rem;
+   color: coral;
+   background-color: rgba(0,0,0,0);
+   font-size: 2.5rem;
+   border: solid .2rem #5A72B6;
+   cursor: pointer;
+ }
+
+#hasRead {
+  border: none;
+  color: #00FF2A;
+  font-size: 20;
+  font-weight: 600;
+  cursor:default;
+}
